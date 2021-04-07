@@ -9,7 +9,7 @@ class IssuesSpider(scrapy.Spider):
 
     def parse(self, response):
         page = response.url
-        fp = open("commits.csv", "a+")
+        fp = open("issues.csv", "a+")
         
         for item in json.loads(response.body):
 
