@@ -6,7 +6,6 @@ class IssuesSpider(scrapy.Spider):
     name = "issues"
     start_urls = ["https://api.github.com/repos/facebook/react-native/issues?page=1&per_page=100"]
 
-
     def parse(self, response):
         page = response.url
         fp = open("issues.csv", "a+")
