@@ -4,7 +4,7 @@ import scrapy
 
 class CommitsSpider(scrapy.Spider):
     name = "commits"
-    start_urls = ["https://api.github.com/repos/facebook/react-native/commits?page=170&per_page=100"]
+    start_urls = ["https://api.github.com/repos/facebook/react-native/commits?page=228&per_page=100"]
 
 
     def parse(self, response):
@@ -21,6 +21,7 @@ class CommitsSpider(scrapy.Spider):
             row['author_commit_date'] = item['commit']['author']['date'] if item['author'] else None 
             row['committer_commit_date'] = item['commit']['committer']['date'] if item['committer'] else None 
             
+            print(json.dumps(row))
             fp.write(json.dumps(row))
             fp.write("\n")
 
