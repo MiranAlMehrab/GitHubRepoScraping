@@ -4,7 +4,7 @@ import scrapy
 
 class CommitsSpider(scrapy.Spider):
     name = "commits"
-    start_urls = ["https://api.github.com/repos/facebook/react-native/commits?page=1&per_page=100"]
+    start_urls = ["https://api.github.com/repos/facebook/react-native/commits?page=170&per_page=100"]
 
 
     def parse(self, response):
