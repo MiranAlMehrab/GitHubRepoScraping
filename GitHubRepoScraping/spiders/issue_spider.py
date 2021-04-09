@@ -4,7 +4,7 @@ import scrapy
 
 class IssuesSpider(scrapy.Spider):
     name = "issues"
-    start_urls = ["https://api.github.com/repos/facebook/react-native/issues?state=all&page=283&per_page=100"]
+    start_urls = ["https://api.github.com/repos/facebook/react-native/issues?state=all&page=342&per_page=100"]
 
     def parse(self, response):
         page = response.url
